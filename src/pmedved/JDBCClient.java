@@ -59,19 +59,25 @@ public class JDBCClient {
 
     Integer getVersionOf(String art) {
         try {
-            Statement stmt = this.con.createStatement();
-            String query = "Select * from alkoholfreie where artbez like '" +art + "';";
-            System.out.println(query);
-            ResultSet rs = stmt.executeQuery(query);
+            Statement stmt1 = this.con.createStatement();
+            String query1 = "Select * from alkoholfreie where artbez like '" +art + "';";
+            System.out.println(query1);
+            ResultSet rs1 = stmt1.executeQuery(query1);
+            int returnValue = 0;
+            while(rs1.next()){
+                returnValue = rs1.getInt("version");
+            }
             //System.out.println(rs);
             //System.out.println(rs.getInt(5));
-            //System.out.println(rs.getInt("version"));
-            return 1;
+            //System.out.println(rs1.getInt("version"));
+            //System.out.println(returnValue);
+            //System.out.println(returnValue);
+            return returnValue;
         } catch (SQLException var7) {
             var7.printStackTrace();
             System.exit(0);
         }
-        return 2;
+        return 0;
     }
 
 

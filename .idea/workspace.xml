@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a1ba7059-35a4-4afc-b2f4-f48f400e04cb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDBC_Client_Artikel/pmedved/ArtikelAdmin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JDBC_Client_Artikel/pmedved/ArtikelAdmin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDBC_Client_Artikel/pmedved/ArtikelAdmin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JDBC_Client_Artikel/pmedved/ArtikelAdmin$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDBC_Client_Artikel/pmedved/ArtikelAdmin$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JDBC_Client_Artikel/pmedved/ArtikelAdmin$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JDBC_Client_Artikel/pmedved/ArtikelAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JDBC_Client_Artikel/pmedved/ArtikelAdmin.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JDBC_Client_Artikel/pmedved/JDBCClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JDBC_Client_Artikel/pmedved/JDBCClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pmedved/ArtikelAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pmedved/ArtikelAdmin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pmedved/JDBCClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pmedved/JDBCClient.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,17 +26,17 @@
       <file leaf-file-name="Artikel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pmedved/Artikel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="-219">
               <caret line="18" column="89" selection-start-line="18" selection-start-column="89" selection-end-line="18" selection-end-column="89" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArtikelAdmin.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ArtikelAdmin.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pmedved/ArtikelAdmin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
+            <state relative-caret-position="2144">
+              <caret line="177" column="66" lean-forward="true" selection-start-line="177" selection-start-column="66" selection-end-line="177" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,20 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JDBCClient.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JDBCClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pmedved/JDBCClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+            <state relative-caret-position="206">
+              <caret line="70" column="47" lean-forward="true" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -67,7 +56,7 @@
       <file leaf-file-name="LostUpdateException.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pmedved/LostUpdateException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="153">
               <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#0#304#0" expanded="true" />
@@ -103,8 +92,8 @@
         <option value="$PROJECT_DIR$/src/pmedved/LostUpdateException.java" />
         <option value="$PROJECT_DIR$/src/pmedved/Artikel.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/pmedved/ArtikelAdmin.java" />
         <option value="$PROJECT_DIR$/src/pmedved/JDBCClient.java" />
+        <option value="$PROJECT_DIR$/src/pmedved/ArtikelAdmin.java" />
       </list>
     </option>
   </component>
@@ -114,10 +103,16 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -248,26 +243,25 @@
       <workItem from="1528723748558" duration="1562000" />
       <workItem from="1528725663076" duration="4694000" />
       <workItem from="1528747444278" duration="4522000" />
-      <workItem from="1528752036599" duration="1383000" />
+      <workItem from="1528752036599" duration="3732000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19083000" />
+    <option name="totallyTimeSpent" value="21432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32838285" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32980332" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32838285" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32838285" />
       <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Designer" order="2" />
@@ -510,23 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pmedved/LostUpdateException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#304#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pmedved/Artikel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="89" selection-start-line="18" selection-start-column="89" selection-end-line="18" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -534,20 +511,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pmedved/ArtikelAdmin.java">
+    <entry file="file://$PROJECT_DIR$/src/pmedved/Artikel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
+        <state relative-caret-position="-219">
+          <caret line="18" column="89" selection-start-line="18" selection-start-column="89" selection-end-line="18" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pmedved/LostUpdateException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#304#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pmedved/JDBCClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+        <state relative-caret-position="206">
+          <caret line="70" column="47" lean-forward="true" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pmedved/ArtikelAdmin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2144">
+          <caret line="177" column="66" lean-forward="true" selection-start-line="177" selection-start-column="66" selection-end-line="177" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
