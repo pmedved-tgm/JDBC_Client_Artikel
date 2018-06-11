@@ -62,6 +62,7 @@ public class ArtikelAdmin extends Application {
         table.setEditable(true);
 
 
+
         TableColumn<Artikel, String> artbezCol = new TableColumn<Artikel, String>("Bezeichnung");
         artbezCol.setMinWidth(200);
         artbezCol.setCellValueFactory(
@@ -94,7 +95,6 @@ public class ArtikelAdmin extends Application {
         table.setItems(data);
         table.getColumns().addAll(artbezCol, katbezCol, bruttprCol, isvegetarischCol,versionCol);
         table.setMinWidth(900);
-
 
         final TextField addartbez = new TextField();
         addartbez.setMaxWidth(artbezCol.getPrefWidth());
