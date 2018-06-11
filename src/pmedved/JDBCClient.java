@@ -16,7 +16,7 @@ import java.util.List;
 
 public class JDBCClient {
     Connection con;
-    Hashtable<Artikel, Integer> versions = new Hashtable();
+    Hashtable<String, Integer> versions = new Hashtable();
 
     JDBCClient() {
         try {
@@ -43,7 +43,7 @@ public class JDBCClient {
             }
 
             ResultSet rs = stmt.executeQuery(query);
-            System.out.println(query);
+            //System.out.println(query);
 
             while(rs.next()) {
                 Artikel a = new Artikel(rs.getString("artbez"), rs.getString("katbez"), rs.getFloat("bruttpr"), rs.getBoolean("isvegetarisch"), rs.getInt("version"));
@@ -56,6 +56,24 @@ public class JDBCClient {
 
         return l;
     }
+
+    Integer getVersionOf(String art) {
+        try {
+            Statement stmt = this.con.createStatement();
+            String query = "Select * from alkoholfreie where artbez like '" +art + "';";
+            System.out.println(query);
+            ResultSet rs = stmt.executeQuery(query);
+            //System.out.println(rs);
+            //System.out.println(rs.getInt(5));
+            //System.out.println(rs.getInt("version"));
+            return 1;
+        } catch (SQLException var7) {
+            var7.printStackTrace();
+            System.exit(0);
+        }
+        return 2;
+    }
+
 
     void addArticle(Artikel a) {
         try {
@@ -71,10 +89,15 @@ public class JDBCClient {
 
     void saveArticle(Artikel a) {
         try {
+            System.out.println("Saved the new Version");
             this.con.setTransactionIsolation(4);
             this.con.setAutoCommit(false);
             Statement stmt = this.con.createStatement();
-            String query = "update artikel set artbez='" + a.getArtbez() + "', katbez='" + a.getKatbez() + "',bruttpr=" + a.getBruttpr() + ",isvegetarisch=" + a.getIsvegetarisch() + ",Version=" + a.getVersion()+ " where artbez=" + a.getArtbez();
+            String query = "update artikel set artbez='" + a.getArtbez() + "', " +
+                    "katbez='" + a.getKatbez() + "'," +
+                    "bruttpr=" + a.getBruttpr() + "," +
+                    "isvegetarisch=" + a.getIsvegetarisch() + "," +
+                    "Version=" + a.getVersion()+ " where artbez='" + a.getArtbez() + "'";
             stmt.executeUpdate(query);
             this.con.commit();
             this.con.setAutoCommit(true);

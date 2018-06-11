@@ -5,6 +5,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.EnumMap;
+import java.util.Enumeration;
+import java.util.Hashtable;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -36,6 +39,7 @@ public class ArtikelAdmin extends Application {
     private TableView<Artikel> table = new TableView<Artikel>();
     private ObservableList<Artikel> data;
     private String inputvar = null;
+    protected Hashtable<String, Integer> ver;
 
     public static void main(String[] args) {
         launch(args);
@@ -58,9 +62,6 @@ public class ArtikelAdmin extends Application {
 
         final Label label = new Label("Artikel");
         label.setFont(new Font("Arial", 20));
-
-        table.setEditable(true);
-
 
 
         TableColumn<Artikel, String> artbezCol = new TableColumn<Artikel, String>("Bezeichnung");
@@ -90,11 +91,19 @@ public class ArtikelAdmin extends Application {
                 new PropertyValueFactory<Artikel, Integer>("version")
         );
 
+        ver = db.versions;
+
+        Enumeration e = ver.keys();
+        while(e.hasMoreElements()) {
+            String key = (String) e.nextElement();
+            System.out.println("Values: " + ver.get(key) + " Keys: " + key);
+        }
 
 
         table.setItems(data);
         table.getColumns().addAll(artbezCol, katbezCol, bruttprCol, isvegetarischCol,versionCol);
         table.setMinWidth(900);
+
 
         final TextField addartbez = new TextField();
         addartbez.setMaxWidth(artbezCol.getPrefWidth());
@@ -111,6 +120,7 @@ public class ArtikelAdmin extends Application {
         final TextField addversion = new TextField();
         addversion.setMaxWidth(isvegetarischCol.getPrefWidth());
         addversion.setPromptText("Version");
+
 
 
 
@@ -148,9 +158,40 @@ public class ArtikelAdmin extends Application {
             }
         });
 
+        final Button change = new Button("change");
+        change.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                System.out.println(table.getSelectionModel().getSelectedItem().getArtbez() + " Wird derzeit bearbeitet");
+
+                try{
+                    int trueVer = db.getVersionOf(table.getSelectionModel().getSelectedItem().getArtbez());
+                    System.out.println(trueVer);
+
+                    // plaveholderVer = table.getSelectionModel().getSelectedItem().getVersion();
+
+                    if(trueVer == table.getSelectionModel().getSelectedItem().getVersion()){
+                        System.out.println("Worked");
+                        Artikel palacehold = new Artikel(
+                                table.getSelectionModel().getSelectedItem().getArtbez(),
+                                table.getSelectionModel().getSelectedItem().getKatbez(),
+                                table.getSelectionModel().getSelectedItem().getBruttpr(),
+                                table.getSelectionModel().getSelectedItem().getIsvegetarisch(),
+                                table.getSelectionModel().getSelectedItem().getVersion()+1);
+                        db.saveArticle(palacehold);
+                    }else{
+                        System.out.println("Daten inzwischen geändert");
+                    }
+                }catch(NullPointerException ne){
+                }
+
+
+            }
+        });
+
         final HBox hb = new HBox();
 
-        hb.getChildren().addAll(addartbez, addkatbez, addBruttpr, addisvegetarisch, addversion, addButton, label1, tf, search);
+        hb.getChildren().addAll(addartbez, addkatbez, addBruttpr, addisvegetarisch, addversion, addButton, change, label1, tf, search);
         hb.setSpacing(3);
 
         final VBox vbox = new VBox();
@@ -162,7 +203,5 @@ public class ArtikelAdmin extends Application {
 
         stage.setScene(scene);
         stage.show();
-
-
     }
 }
